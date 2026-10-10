@@ -1,0 +1,256 @@
+/* 
+   СБРОС И БАЗОВЫЕ СТИЛИ
+   */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #fdf6ec;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*
+   СЕЛЕКТОР ТЕГА
+    */
+header {
+    background-color: #8b2e2e;
+    background-image: url('../images/main-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 60px 40px;
+    border-bottom: 4px solid #5a1a1a;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 15px;
+    color: #f5b342;
+    margin-top: 5px;
+}
+
+nav {
+    background-color: #5a1a1a;
+    padding: 12px 40px;
+}
+
+nav a {
+    color: #fdf6ec;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f5b342;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #5a1a1a;
+    color: #fdf6ec;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* 
+   СЕЛЕКТОР КЛАССА
+   */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e0d5c0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #8b2e2e;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    background-color: #fff4d6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #8b2e2e;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f5b342;
+    color: #333;
+    padding: 10px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e0a02a;
+}
+.main-image {
+    
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    border: 3px solid #8b2e2e;
+}
+
+/* 
+   СЕЛЕКТОР ID
+    */
+#page-title {
+    color: #8b2e2e;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    border-bottom: 2px dashed #f5b342;
+    padding-bottom: 15px;
+}
+
+#main-image {
+    display: block;
+    margin: 0 auto 25px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #8b2e2e;
+}
+.small-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    
+}
+
+/* 
+   ТАБЛИЦА
+    */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+table caption {
+    caption-side: top;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b2e2e;
+    padding: 10px;
+    text-align: center;
+}
+
+table th, table td {
+    border: 1px solid #d4c4a8;
+    padding: 12px 15px;
+}
+
+table th {
+    background-color: #8b2e2e;
+    color: #fff;
+    font-size: 16px;
+}
+
+.col-left   { text-align: left;   }
+.col-center { text-align: center; }
+.col-right  { text-align: right;  }
+
+table tr:nth-child(even) {
+    background-color: #fdf6ec;
+}
+
+table tr:hover {
+    background-color: #fff4d6;
+}
+table td a {
+    color: #8b2e2e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed #f5b342;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+table td a:hover {
+    color: #f5b342;
+    border-bottom-color: #8b2e2e;
+}
+
+/* 
+   СПИСКИ
+    */
+ul.ingredients {
+    list-style-type: square;
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+ul.ingredients li {
+    margin-bottom: 8px;
+}
+
+ol.steps {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+ol.steps li {
+    margin-bottom: 12px;
+}
+
+/* 
+   БЛОЧНЫЕ И СТРОЧНЫЕ ЭЛЕМЕНТЫ
+    */
+.recipe-meta {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff4d6;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.recipe-meta span {
+    font-weight: bold;
+    color: #8b2e2e;
+}
+
+/* 
+   АДАПТИВ
+   */
+img {
+    max-width: 100%;
+}
