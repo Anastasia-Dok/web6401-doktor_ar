@@ -59,14 +59,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-footer {
-    background-color: #5a1a1a;
-    color: #fdf6ec;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-}
 
 /* 
    СЕЛЕКТОР КЛАССА
@@ -124,10 +116,8 @@ footer {
     border: 3px solid #8b2e2e;
 }
 
-/* 
-   СЕЛЕКТОР ID
-    */
-#page-title {
+
+.page-title {
     color: #8b2e2e;
     text-align: center;
     font-size: 32px;
@@ -136,14 +126,7 @@ footer {
     padding-bottom: 15px;
 }
 
-#main-image {
-    display: block;
-    margin: 0 auto 25px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 3px solid #8b2e2e;
-}
+
 .small-image {
     width: 400px;
     max-width: 100%;
