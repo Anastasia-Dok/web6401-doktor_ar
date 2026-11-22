@@ -1,0 +1,21 @@
+
+
+/* Ряд карточек на Flexbox */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.cards > .card {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.cards > .card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}

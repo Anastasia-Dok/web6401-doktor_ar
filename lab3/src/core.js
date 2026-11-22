@@ -4,7 +4,7 @@
  */
 function isInteger(n) {
      // Проверяем, что это число (и не NaN), и что после "округления" оно не изменилось
-    return typeof n === 'number' && !isNaN(n) && (n | 0) === n;
+    return (n | 0) === n;
 }
 
 /**
@@ -12,8 +12,8 @@ function isInteger(n) {
  */
 function even() {
     const result = [];
-    for (let i = 2; i <= 20; i += 2) {
-        result.push(i);
+    for (let i = 1; i <= 10; i += 1) {
+        result.push(i*2);
     }
     return result;
 }
@@ -35,7 +35,8 @@ function sumTo(n) {
  * @param {*} n
  */
 function recSumTo(n) {
-    if (n==1) return 1;
+    if (n <= 0) return 0;
+    if (n===1) return 1;
     return n + recSumTo(n-1);
 }
 
@@ -44,6 +45,7 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
+    if (n < 0) return undefined;
     if (n === 0 || n === 1)  return 1;
     return n * factorial(n - 1);
 }
@@ -63,9 +65,7 @@ function isBinary(n) {
  * @param {*} n
  */
 function fibonacci(n) {
-    if (n < 0) {
-        throw new Error('n должно быть неотрицательным');
-    }
+    if (n < 0) return undefined;
     if (n <= 1) return n;
     let a = 0, b = 1;
     for (let i = 2; i <= n; i++) {
@@ -156,18 +156,19 @@ function deepEqual(firstObject, secondObject) {
     }
 
     // Если одно из значений не объект или null, а другое — объект
+    //пропускаем только те значения которые можно сравнить по ключам
     if (typeof firstObject !== 'object' || firstObject === null ||
         typeof secondObject !== 'object' || secondObject === null) {
         return false;
     }
-
+    // Получаем массивы ключей (имен свойств) для обоих объектов
     const keys1 = Object.keys(firstObject);
     const keys2 = Object.keys(secondObject);
-
+    //Если у объектов разное количество ключей, они точно не равны
     if (keys1.length !== keys2.length) {
         return false;
     }
-
+    // Проходимся циклом по всем ключам первого объекта
     for (const key of keys1) {
         if (!keys2.includes(key) || !deepEqual(firstObject[key], secondObject[key])) {
             return false;

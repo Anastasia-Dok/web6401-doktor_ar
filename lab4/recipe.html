@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вкусно и просто — Паста карбонара</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/flex.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">Вкусно и просто</h1>
+    <p class="header__subtitle">Рецепты, которые получаются с первого раза</p>
+  </header>
+
+  <nav class="nav">
+    <a class="nav__link" href="index.html">Главная</a>
+    <a class="nav__link" href="recipes.html">Рецепты</a>
+    <a class="nav__link nav__link--active" href="recipe.html">Рецепт дня</a>
+    <a class="nav__link" href="products.html">Продукты</a>
+    
+    <button class="nav__login-btn" id="open-login">Вход</button>
+  </nav>
+
+  <main class="main">
+    <h2 class="page-title"> Паста карбонара</h2>
+
+    <img class="small-image" src="images/паста.png" alt="Паста карбонара">
+
+    <div class="recipe-meta">
+      <span class="recipe-meta__item">25 минут</span>
+      <span class="recipe-meta__item">2 порции</span>
+      <span class="recipe-meta__item">Средняя сложность</span>
+    </div>
+
+    <div class="card">
+      <h3 class="card__title">Ингредиенты</h3>
+      <ul class="list list--ingredients">
+        <li class="list__item">Спагетти — 200 г</li>
+        <li class="list__item">Бекон — 150 г</li>
+        <li class="list__item">Яйца — 2 шт</li>
+        <li class="list__item">Желток — 1 шт</li>
+        <li class="list__item">Сыр пармезан — 50 г</li>
+        <li class="list__item">Чёрный перец — по вкусу</li>
+        <li class="list__item">Соль — по вкусу</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3 class="card__title">Приготовление</h3>
+      <ol class="list list--steps">
+        <li class="list__item">Отварите спагетти в подсоленной воде до состояния аль денте.</li>
+        <li class="list__item">Обжарьте бекон на сухой сковороде до золотистой корочки.</li>
+        <li class="list__item">В миске смешайте яйца, желток и тёртый пармезан.</li>
+        <li class="list__item">Слейте воду со спагетти, оставив немного воды для соуса.</li>
+        <li class="list__item">Соедините горячую пасту с беконом, снимите с огня.</li>
+        <li class="list__item">Быстро вмешайте яично-сырную смесь, добавьте немного воды от пасты.</li>
+        <li class="list__item">Поперчите и сразу подавайте.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3 class="card__title">Совет</h3>
+      <p class="card__text">
+        <span class="highlight">Не готовьте соус на огне</span> — иначе яйца свернутся,
+        и получится омлет вместо соуса.
+      </p>
+      <a href="recipes.html" class="button">← Все рецепты</a>
+    </div>
+  </main>
+
+<div class="modal" id="login-modal">
+  <div class="modal__overlay" id="close-modal-overlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" id="close-modal-btn">&times;</button>
+    
+    <form class="form" id="login-form" novalidate>
+      <h2 class="form__title">Вход в личный кабинет</h2>
+      
+      <label class="form__field">
+        <span class="form__label">Логин</span>
+        <input class="form__input" type="text" id="login" name="login" placeholder="Ваш логин" required>
+      </label>
+      
+      <label class="form__field">
+        <span class="form__label">Пароль</span>
+        <input class="form__input" type="password" id="password" name="password" placeholder="••••••••" required>
+      </label>
+      
+      <label class="form__field">
+        <span class="form__label">Email</span>
+        <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com">
+      </label>
+      
+      <label class="form__checkbox">
+        <input class="form__checkbox-input" type="checkbox" id="agreement" required>
+        <span class="form__checkbox-text">Согласен на обработку персональных данных</span>
+      </label>
+      
+      <button class="button button--primary form__submit" type="submit">Войти</button>
+      <p class="form__message" id="form-message" role="status"></p>
+    </form>
+  </div>
+</div>
+
+<script src="js/form.js"></script>
+</body>
+</html>

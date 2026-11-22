@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вкусно и просто — Каталог рецептов</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/flex.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">Вкусно и просто</h1>
+    <p class="header__subtitle">Рецепты, которые получаются с первого раза</p>
+  </header>
+
+  <nav class="nav">
+    <a class="nav__link" href="index.html">Главная</a>
+    <a class="nav__link nav__link--active" href="recipes.html">Рецепты</a>
+    <a class="nav__link" href="recipe.html">Рецепт дня</a>
+    <a class="nav__link" href="products.html">Продукты</a>
+    <button class="nav__login-btn" id="open-login">Вход</button>
+  </nav>
+
+  <main class="main">
+    <h2 class="page-title">Каталог рецептов</h2>
+
+    <p>
+      В нашей коллекции блюда на любой случай.
+      <span class="highlight">Выбирайте по категории, времени или сложности</span>.
+    </p>
+
+    <table class="table">
+      <caption class="table__caption">Список рецептов</caption>
+      <thead>
+        <tr>
+          <th class="table__cell--left">Блюдо</th>
+          <th class="table__cell--center">Категория</th>
+          <th class="table__cell--center">Время</th>
+          <th class="table__cell--right">Сложность</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table__cell--left"><a href="recipe.html">Паста карбонара</a></td>
+          <td class="table__cell--center">Основное</td>
+          <td class="table__cell--center">25 мин</td>
+          <td class="table__cell--right">Средняя</td>
+        </tr>
+        <tr>
+          <td class="table__cell--left">Греческий салат</td>
+          <td class="table__cell--center">Салат</td>
+          <td class="table__cell--center">15 мин</td>
+          <td class="table__cell--right">Легко</td>
+        </tr>
+        <tr>
+          <td class="table__cell--left">Шоколадный брауни</td>
+          <td class="table__cell--center">Десерт</td>
+          <td class="table__cell--center">40 мин</td>
+          <td class="table__cell--right">Средняя</td>
+        </tr>
+        <tr>
+          <td class="table__cell--left">Тыквенный суп</td>
+          <td class="table__cell--center">Суп</td>
+          <td class="table__cell--center">35 мин</td>
+          <td class="table__cell--right">Легко</td>
+        </tr>
+        <tr>
+          <td class="table__cell--left">Курица терияки</td>
+          <td class="table__cell--center">Основное</td>
+          <td class="table__cell--center">30 мин</td>
+          <td class="table__cell--right">Средняя</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card">
+      <h3 class="card__title">Не знаете, что выбрать?</h3>
+      <p class="card__text">
+        Посмотрите <span class="highlight">рецепт дня</span> — мы обновляем его каждое утро.
+      </p>
+      <a href="recipe.html" class="button">Рецепт дня</a>
+    </div>
+  </main>
+<div class="modal" id="login-modal">
+  <div class="modal__overlay" id="close-modal-overlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" id="close-modal-btn">&times;</button>
+    
+    <form class="form" id="login-form" novalidate>
+      <h2 class="form__title">Вход в личный кабинет</h2>
+      
+      <label class="form__field">
+        <span class="form__label">Логин</span>
+        <input class="form__input" type="text" id="login" name="login" placeholder="Ваш логин" required>
+      </label>
+      
+      <label class="form__field">
+        <span class="form__label">Пароль</span>
+        <input class="form__input" type="password" id="password" name="password" placeholder="••••••••" required>
+      </label>
+      
+      <label class="form__field">
+        <span class="form__label">Email</span>
+        <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com">
+      </label>
+      
+      <label class="form__checkbox">
+        <input class="form__checkbox-input" type="checkbox" id="agreement" required>
+        <span class="form__checkbox-text">Согласен на обработку персональных данных</span>
+      </label>
+      
+      <button class="button button--primary form__submit" type="submit">Войти</button>
+      <p class="form__message" id="form-message" role="status"></p>
+    </form>
+  </div>
+</div>
+
+<script src="js/form.js"></script>
+
+</body>
+</html>
