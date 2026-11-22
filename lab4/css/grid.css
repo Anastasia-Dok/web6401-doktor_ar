@@ -1,0 +1,40 @@
+/* Главная сетка страницы через grid-template-areas */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main";
+  grid-template-rows: auto auto 1fr;
+  min-height: 100vh;
+}
+
+.layout__header { grid-area: header; }
+.layout__nav    { grid-area: nav;    }
+.layout__main   { grid-area: main;   }
+
+/* Сетка карточек продуктов */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.product-grid > .card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.product-grid > .card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Блок «Сроки хранения» — тоже grid */
+.storage {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}

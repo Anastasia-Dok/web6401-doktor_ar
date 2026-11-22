@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вкусно и просто — Главная</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/flex.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">Вкусно и просто</h1>
+    <p class="header__subtitle">Рецепты, которые получаются с первого раза</p>
+  </header>
+
+  <nav class="nav layout__nav">
+    <a class="nav__link nav__link--active" href="index.html">Главная</a>
+    <a class="nav__link" href="recipes.html">Рецепты</a>
+    <a class="nav__link" href="recipe.html">Рецепт дня</a>
+    <a class="nav__link" href="products.html">Продукты</a>
+    
+  
+   <button class="nav__login-btn" id="open-login">Вход</button>
+  </nav>
+
+  <main class="main">
+    <h2 class="page-title">Добро пожаловать!</h2>
+
+    <div class="card">
+      <h3 class="card__title">О нашем проекте</h3>
+      <p class="card__text">
+        Здесь собраны <span class="highlight">простые и проверенные</span> рецепты
+        для повседневной кухни. Мы готовим сами и делимся только тем, что
+        действительно получается вкусно.
+      </p>
+      <a href="recipes.html" class="button">Смотреть все рецепты</a>
+    </div>
+
+    <h2 class="page-title">Популярные рецепты</h2>
+
+    <div class="cards">
+      <article class="card">
+        <h3 class="card__title">Паста карбонара</h3>
+        <p class="card__text">Классическая итальянская паста с беконом, яйцами и сыром пармезан.</p>
+        <a href="recipe.html" class="button">Открыть рецепт</a>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Греческий салат</h3>
+        <p class="card__text">Свежие овощи, сыр фета, оливки и ароматное оливковое масло.</p>
+        <a href="recipe.html" class="button">Открыть рецепт</a>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Шоколадный брауни</h3>
+        <p class="card__text">Влажный шоколадный десерт с хрустящей корочкой.</p>
+        <a href="recipe.html" class="button">Открыть рецепт</a>
+      </article>
+    </div>
+  </main>
+  <div class="modal" id="login-modal">
+  <div class="modal__overlay" id="close-modal-overlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" id="close-modal-btn">&times;</button>
+    
+    <form class="form" id="login-form" novalidate>
+      <h2 class="form__title">Вход в личный кабинет</h2>
+      
+      <label class="form__field">
+        <span class="form__label">Логин</span>
+        <input class="form__input" type="text" id="login" name="login" placeholder="Ваш логин" required>
+      </label>
+      
+      <label class="form__field">
+        <span class="form__label">Пароль</span>
+        <input class="form__input" type="password" id="password" name="password" placeholder="••••••••" required>
+      </label>
+      
+      <label class="form__field">
+        <span class="form__label">Email</span>
+        <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com">
+      </label>
+      
+      <label class="form__checkbox">
+        <input class="form__checkbox-input" type="checkbox" id="agreement" required>
+        <span class="form__checkbox-text">Согласен на обработку персональных данных</span>
+      </label>
+      
+      <button class="button button--primary form__submit" type="submit">Войти</button>
+      <p class="form__message" id="form-message" role="status"></p>
+    </form>
+  </div>
+</div>
+
+<script src="js/form.js"></script>
+</body>
+</html>

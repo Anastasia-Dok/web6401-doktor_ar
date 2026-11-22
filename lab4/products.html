@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вкусно и просто — Всё о продуктах</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body class="layout">
+
+  <header class="header layout__header">
+    <h1 class="header__title">Вкусно и просто</h1>
+    <p class="header__subtitle">Рецепты, которые получаются с первого раза</p>
+  </header>
+
+  <nav class="nav layout__nav">
+    <a class="nav__link" href="index.html">Главная</a>
+    <a class="nav__link" href="recipes.html">Рецепты</a>
+    <a class="nav__link" href="recipe.html">Рецепт дня</a>
+    <a class="nav__link nav__link--active" href="products.html">Продукты</a>
+    <button class="nav__login-btn" id="open-login">Вход</button>
+  </nav>
+
+  <main class="main layout__main">
+    <h2 class="page-title">Всё о продуктах</h2>
+
+    <img class="small-image" src="images/овощи.png" alt="Овощи">
+
+    <p>
+      Хорошее блюдо начинается с хороших продуктов.
+      <span class="highlight">Узнайте, как выбрать, хранить и использовать</span>
+      основные ингредиенты.
+    </p>
+
+    <div class="product-grid">
+      <article class="card">
+        <h3 class="card__title">Овощи и фрукты</h3>
+        <p class="card__text">
+          Основа здорового питания. Содержат витамины, минералы и клетчатку.
+          Выбирайте сезонные продукты — они вкуснее и полезнее.
+        </p>
+        <ul class="list list--ingredients">
+          <li class="list__item"><strong>Помидоры</strong> — источник ликопина, хранить при комнатной температуре</li>
+          <li class="list__item"><strong>Морковь</strong> — богата бета-каротином, хранить в прохладном месте</li>
+          <li class="list__item"><strong>Яблоки</strong> — клетчатка и витамин C, хранить в холодильнике</li>
+          <li class="list__item"><strong>Шпинат</strong> — железо и фолиевая кислота, хранить в бумажном полотенце</li>
+        </ul>
+        <a href="recipes.html" class="button">К рецептам</a>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Мясо и рыба</h3>
+        <p class="card__text">
+          Источники белка и незаменимых аминокислот. Обращайте внимание
+          на свежесть и срок годности.
+        </p>
+        <ul class="list list--ingredients">
+          <li class="list__item"><strong>Курица</strong> — диетическое мясо, хранить в холодильнике не более 2 суток</li>
+          <li class="list__item"><strong>Говядина</strong> — источник железа, лучше покупать охлаждённой</li>
+          <li class="list__item"><strong>Лосось</strong> — омега-3 жирные кислоты, хранить на льду</li>
+          <li class="list__item"><strong>Треска</strong> — нежирная рыба, подходит для диетического питания</li>
+        </ul>
+        <a href="recipes.html" class="button">К рецептам</a>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Крупы и макароны</h3>
+        <p class="card__text">
+          Долго хранятся и дают энергию. Основа многих блюд.
+        </p>
+        <ul class="list list--ingredients">
+          <li class="list__item"><strong>Рис</strong> — хранить в сухом месте, срок до 12 месяцев</li>
+          <li class="list__item"><strong>Гречка</strong> — богата железом, варить 15–20 минут</li>
+          <li class="list__item"><strong>Спагетти</strong> — из твёрдых сортов пшеницы, аль денте за 8–10 минут</li>
+          <li class="list__item"><strong>Овсянка</strong> — идеальна для завтрака</li>
+        </ul>
+        <a href="recipes.html" class="button">К рецептам</a>
+      </article>
+    </div>
+
+    <section class="storage">
+      <h2 class="page-title">Сроки хранения продуктов</h2>
+
+      <table class="table">
+        <caption class="table__caption">Как долго можно хранить продукты</caption>
+        <thead>
+          <tr>
+            <th class="table__cell--left">Продукт</th>
+            <th class="table__cell--center">Где хранить</th>
+            <th class="table__cell--center">Срок</th>
+            <th class="table__cell--right">Температура</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table__cell--left">Молоко</td>
+            <td class="table__cell--center">Холодильник</td>
+            <td class="table__cell--center">3–5 дней</td>
+            <td class="table__cell--right">+2…+4 °C</td>
+          </tr>
+          <tr>
+            <td class="table__cell--left">Курица (сырая)</td>
+            <td class="table__cell--center">Холодильник</td>
+            <td class="table__cell--center">1–2 дня</td>
+            <td class="table__cell--right">0…+2 °C</td>
+          </tr>
+          <tr>
+            <td class="table__cell--left">Яйца</td>
+            <td class="table__cell--center">Холодильник</td>
+            <td class="table__cell--center">3–5 недель</td>
+            <td class="table__cell--right">+2…+5 °C</td>
+          </tr>
+          <tr>
+            <td class="table__cell--left">Картофель</td>
+            <td class="table__cell--center">Тёмное место</td>
+            <td class="table__cell--center">2–3 месяца</td>
+            <td class="table__cell--right">+4…+8 °C</td>
+          </tr>
+          <tr>
+            <td class="table__cell--left">Крупы</td>
+            <td class="table__cell--center">Шкаф</td>
+            <td class="table__cell--center">6–12 месяцев</td>
+            <td class="table__cell--right">+15…+20 °C</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="card">
+      <h3 class="card__title">Полезный совет</h3>
+      <p class="card__text">
+        <span class="highlight">Не храните вместе</span> фрукты и овощи:
+        фрукты выделяют этилен, из-за которого овощи быстрее портятся.
+      </p>
+      <a href="recipes.html" class="button">Перейти к рецептам</a>
+    </div>
+  </main>
+
+    <div class="modal" id="login-modal">
+    <div class="modal__overlay" id="close-modal-overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="close-modal-btn">&times;</button>
+        
+        <form class="form" id="login-form" novalidate>
+        <h2 class="form__title">Вход в личный кабинет</h2>
+        
+        <label class="form__field">
+            <span class="form__label">Логин</span>
+            <input class="form__input" type="text" id="login" name="login" placeholder="Ваш логин" required>
+        </label>
+        
+        <label class="form__field">
+            <span class="form__label">Пароль</span>
+            <input class="form__input" type="password" id="password" name="password" placeholder="••••••••" required>
+        </label>
+        
+        <label class="form__field">
+            <span class="form__label">Email</span>
+            <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com">
+        </label>
+        
+        <label class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox" id="agreement" required>
+            <span class="form__checkbox-text">Согласен на обработку персональных данных</span>
+        </label>
+        
+        <button class="button button--primary form__submit" type="submit">Войти</button>
+        <p class="form__message" id="form-message" role="status"></p>
+        </form>
+    </div>
+    <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+:root {
+  /* Основные цвета */
+  --color-bg:           #fdf6ec;
+  --color-surface:      #ffffff;
+  --color-text:         #333333;
+  --color-text-inverse: #ffffff;
+
+  /* Бренд */
+  --color-primary:      #8b2e2e;   /* тёмно-красный */
+  --color-primary-dark: #5a1a1a;   /* для nav / border */
+  --color-accent:       #f5b342;   /* золотой */
+  --color-accent-dark:  #e0a02a;   /* hover */
+
+  /* Подложки */
+  --color-highlight-bg: #fff4d6;
+  --color-border:       #e0d5c0;
+  --color-border-table: #d4c4a8;
+  --color-row-even:     #fdf6ec;
+  --color-row-hover:    #fff4d6;
+
+  /* Тени */
+  --shadow-card:        0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-header-text: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
+  /* Отступы (шкала) */
+  --space-xs: 6px;
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 30px;
+  --space-xl: 60px;
+
+  /* Радиусы */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+}
